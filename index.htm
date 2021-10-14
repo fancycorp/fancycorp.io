@@ -1,11 +1,76 @@
 <style type="text/css">
+/* Based on https://codepen.io/chris22smith/pen/PbBwjp */
+body {
+  margin: 0;
+}
+html {
+  background-image: linear-gradient(#eee, #aaa);
+  height: 100%;
+}
+
 img {
+  border: solid 2px;
+  border-bottom-color: #ffe;
+  border-left-color: #eed;
+  border-right-color: #eed;
+  border-top-color: #ccb;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.frame {
+  background-color: #ddc;
+  border: solid 5vmin #eee;
+  border-bottom-color: #fff;
+  border-left-color: #eee;
+  border-radius: 2px;
+  border-right-color: #eee;
+  border-top-color: #ddd;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset, 0 5px 10px 5px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 10vh 10vw;
+  height: 80vh;
+  padding: 8vmin;
+  position: relative;
+  text-align: center;
+}
+.frame:before {
+  border-radius: 2px;
+  bottom: -2vmin;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25) inset;
+  content: "";
+  left: -2vmin;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: -2vmin;
+  top: -2vmin;
+}
+.frame:after {
+  border-radius: 2px;
+  bottom: -2.5vmin;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  content: "";
+  left: -2.5vmin;
+  position: absolute;
+  right: -2.5vmin;
+  top: -2.5vmin;
+}
+
+.art {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index:1000;
+  color: #878787;
+  font-family: sans-serif;
+}
+.art a {
+  color:#878787;
 }
 </style>
 <title>Fancy That</title>
 <link rel="shortcut icon" type="image/jpg" href="fancycorp.jpg"/>
-<img src="fancycorp.jpg" />
+<div class="frame">
+  <img src="fancycorp.jpg" />
+<div class="art">Art by <a href="https://www.fiverr.com/dinal06">Dinal</a></div>
+</div>
